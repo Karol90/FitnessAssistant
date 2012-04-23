@@ -1,0 +1,21 @@
+﻿
+
+{% block title %}<h1>Informacje o użytkowniku</h1>{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+<p>
+Username:{{ user.user.username }}<br>
+{{ user.imie }}<br>
+{{ user.nazwisko }}<br>
+{{ user.data_urodzenia }}<br>
+{{ user.kalorie_zap }}<br>
+{{ user.bialko_zap }}<br>
+{{ user.weglow_zap }}<br>
+{{ user.tluszcze }}<br>
+
+{% endblock %}
+<a href="http://127.0.0.1:8000/uzytkownik">Powrót</a>

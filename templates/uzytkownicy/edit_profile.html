@@ -1,0 +1,23 @@
+
+{% block title %}Fitness Assistant{% endblock %}
+
+{% block header %}
+rejestracja
+{% endblock %}
+
+{% block content %}
+  <h1>Edit an account</h1>
+
+  {{ error }}
+	<form action="" method="post">
+  		<table>  			
+  			{{ account_form.as_table}}
+  		</table>
+  		<input type="submit" value="Create the account">
+	</form>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+<a href="http://127.0.0.1:8000/uzytkownik">Powrót</a>
