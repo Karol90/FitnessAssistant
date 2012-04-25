@@ -1,0 +1,22 @@
+﻿{% block title %}Fitness Assistant{% endblock %}
+
+{% block header %}
+
+{% endblock %}
+
+{% block content %}
+  <h1>Dodaj produkt do bazy</h1>
+
+  {{ error }}
+	<form action="" method="post">
+  		<table>
+  			{{ add_product_form.as_table}}
+  		</table>
+  		<input type="submit" value="Dodaj produkt">
+	</form>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+<a href="http://127.0.0.1:8000/uzytkownik">Powrót</a>

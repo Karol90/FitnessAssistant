@@ -1,0 +1,26 @@
+{% block title %}Fitness Assistant{% endblock %}
+
+{% block header %}
+Dodawanie posiłku
+{% endblock %}
+
+{% block content %}
+  <h1>Dodawanie posiłku</h1>
+
+  {{ error }}
+	<form action="" method="POST">    
+        {{ add_meal_form.as_p }}  
+        
+    <h2>Pozycje</h2>    
+    {{ add_position_formset.management_form }}
+    {% for form in add_position_formset.forms %}    
+      {{ form.as_p }}          
+    {% endfor %}
+    <input type="submit" value=" Submit " />
+	</form>
+{% endblock %}
+
+{% block footer %}
+
+{% endblock %}
+<a href="http://127.0.0.1:8000/uzytkownik">Powrót</a>
