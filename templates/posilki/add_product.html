@@ -1,18 +1,18 @@
 ﻿{% block title %}Fitness Assistant{% endblock %}
 
 {% block header %}
-rejestracja
+
 {% endblock %}
 
 {% block content %}
-  <h1>Add product</h1>
+  <h1>Dodaj produkt do bazy</h1>
 
   {{ error }}
 	<form action="" method="post">
   		<table>
   			{{ add_product_form.as_table}}
   		</table>
-  		<input type="submit" value="Create the account">
+  		<input type="submit" value="Dodaj produkt">
 	</form>
 {% endblock %}
 

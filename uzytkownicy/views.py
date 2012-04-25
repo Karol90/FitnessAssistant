@@ -83,7 +83,11 @@ def edit_profile_view(request):
         account_form = EditProfileForm(request.POST, instance = account)        
         if account_form.is_valid():                               
                 account_form.save()
-                return render_to_response('uzytkownicy/user.html')
+                message = u'Zmiana danych zakonczona powodzeniem'
+                return render_to_response("uzytkownicy/user.html", {
+                                                                'message':
+                                                               message,
+                                                                })
         else:
                 error = u'Form is invalid'
                 return errorHandle(error,account_form)

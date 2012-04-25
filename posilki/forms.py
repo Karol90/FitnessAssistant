@@ -9,8 +9,10 @@ class ProduktForm(forms.ModelForm):
 class PosilekForm(forms.ModelForm):
     class Meta:
         model = Posilek
+        exclude = ('uzytkownik','pozycje')
 
 class PositionForm(forms.ModelForm):
     class Meta:
         model = Pozycja
+        exclude = ('posilek',)
         

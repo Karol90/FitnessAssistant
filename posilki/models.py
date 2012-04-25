@@ -12,7 +12,7 @@ class Kategoria(models.Model):
 class Produkt(models.Model):
     nazwa = models.CharField(max_length=200) 
     kategoria = models.ForeignKey(Kategoria)
-    kalorie = models.IntegerField(null=True, blank=True)
+    kalorie = models.IntegerField()
     bialko = models.IntegerField()
     tluszcz = models.IntegerField()
     weglowodany = models.IntegerField()

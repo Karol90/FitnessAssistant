@@ -8,20 +8,15 @@ Dodawanie posiłku
   <h1>Dodawanie posiłku</h1>
 
   {{ error }}
-	<form action="" method="post">
-		
-  		<table>
-  			{{ add_position_form.as_table}}
-  		
-  		</table>
-  		<input type="submit" name="form1" value="Create the account">
-	</form>
-	
-	<form action="" method="post">		
-  		<table>  			
-  			{{ add_meal_form.as_table}}
-  		</table>
-  		<input type="submit" name="form2" value="Create the account">
+	<form action="" method="POST">    
+        {{ add_meal_form.as_p }}  
+        
+    <h2>Pozycje</h2>    
+    {{ add_position_formset.management_form }}
+    {% for form in add_position_formset.forms %}    
+      {{ form.as_p }}          
+    {% endfor %}
+    <input type="submit" value=" Submit " />
 	</form>
 {% endblock %}
 
